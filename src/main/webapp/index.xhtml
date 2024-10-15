@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="jakarta.faces.ajax">
+<h:head>
+    <title>Numberle Game</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+<h:body>
+    <h1>Numberle Game</h1>
+    <h:form>
+        <h:panelGrid columns="1">
+            <h:outputLabel value="Guess a 6-digit number:"/>
+            <h:outputLabel value="#{numberleBean.attempts}" escape="false"/>
+            <h:panelGroup layout="block">
+                <h:outputLabel value="#{numberleBean.currentAttempt}" escape="false"/>
+                <h:inputText value="#{numberleBean.guess}" size="1" maxlength="1" required="true"
+                             rendered="#{!numberleBean.isOver()}"/>
+            </h:panelGroup>
+        </h:panelGrid>
+        <h:outputLabel value="Congratulations, you won!" rendered="#{numberleBean.won}" />
+        <h:outputLabel value="Game Over! The secret number was #{numberleBean.secretNumber}." 
+                       rendered="#{numberleBean.tryCounter >= 6}" />
+        <h:commandButton value="Reset Game" action="#{numberleBean.resetGame()}" rendered="#{numberleBean.isOver()}" />
+    </h:form>
+</h:body>
+</html>

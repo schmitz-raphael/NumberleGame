@@ -1,0 +1,47 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #8b7f7f;
+}
+
+h1 {
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+div {
+  margin-top: 5px;
+}
+
+.number {
+  display: flex;
+  gap: 5px; /* Spacing between digits */
+  margin-top: 10px; /* Space above number display */
+}
+
+.digit {
+  padding: 10px;
+  margin: 5px;
+  color: #FFFFFF;
+  background-color: #8b7f7f;
+  border-radius: 10px;
+  display: flex; /* Centering content inside the digit box */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 40px; /* Fixed width to ensure all digits are the same size */
+  height: 40px; /* Fixed height for consistent sizing */
+  font-size: 20px; /* Adjusted font size for visibility */
+}
